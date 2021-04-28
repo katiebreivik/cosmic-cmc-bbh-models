@@ -1,5 +1,8 @@
 """Contains cosmic star formation histories"""
 
+import numpy as np
+from scipy.stats import norm
+
 
 def mean_metal_z(z):
     """
@@ -109,6 +112,6 @@ def madau_17(z):
         star formation rate [Msun/yr]
     """
 
-    sfr = 0.01*(1+z)**(2.6)  / (1+((1+z)/3.2)**6.2)
+    sfr = 0.01 * (1 + z) ** (2.6) / (1 + ((1 + z) / 3.2) ** 6.2)
 
     return sfr
